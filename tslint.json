@@ -5,7 +5,7 @@
         "class-name": true,
         "eofline": true,
         "max-line-length": [true, 120],
-        "no-console": true,
+        "no-console": false,
         "no-duplicate-imports": true,
         "no-irregular-whitespace": true,
         "no-parameter-reassignment": true,
