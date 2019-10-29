@@ -4,10 +4,11 @@ import exampleRouter from './exampleRouter';
 import logger from './utils/logger';
 import { getEnv } from './utils/getEnv';
 
-export default (database) => {
+export default (pgInstance, knexInstance) => {
     const app = express();
 
-    app.locals.pg = database;
+    app.locals.pg = pgInstance;
+    app.locals.knex = knexInstance;
     app.locals.logger = logger;
 
     if (!process.env.SUPPRESS_LOGS) app.use(morgan(getEnv('LOG_FORMAT_MORGAN')));
