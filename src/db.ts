@@ -11,7 +11,7 @@ export const knexCxn = () => knex({
         host: getEnv('DB_HOST'),
         database: `${prefix}${getEnv('DB_NAME')}`,
         password: getEnv('DB_PASSWORD'),
-        port: getEnv('DB_PORT')
+        port: getEnv('DB_PORT'),
     },
     pool: {
         min: 2,
